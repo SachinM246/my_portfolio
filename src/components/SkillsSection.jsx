@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const skills = [
     // Languages
     { name: 'JavaScript', level: 90, category: 'Languages' },
@@ -28,27 +30,48 @@ const skills = [
     { name: 'Figma', level: 70, category: 'Database & Tools' },
 ];
 
+const categories = ['All', 'Languages', 'Frameworks & Libraries', 'Database & Tools'];
+
 export const SkillsSection = () => {
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const filteredSkills = skills.filter((skill) => activeCategory === 'All' || skill.category === activeCategory);
+
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30 dark:bg-secondary/40">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
                     My <span className="text-primary">Skills</span>
                 </h2>
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    {categories.map((category, key) => (
+                        <button
+                            key={key}
+                            className={`py-2 px-5 rounded-full transition-colors duration-300 ${activeCategory === category
+                                ? 'bg-primary text-primary-foreground'
+                                : 'bg-secondary/70 hover:bg-secondary text-muted-foreground'
+                                }`}
+                            onClick={() => setActiveCategory(category)}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {skills.map((skill, key) => (
+                    {filteredSkills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-md card-hover">
                             <div className="text-left mb-4">
-                                <h3 className="text-lg font-semibold">{skill.name}</h3>
+                                <h3 className="text-sm ">{skill.name}</h3>
                             </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+                            <div className="w-full bg-secondary/50 h-1 rounded-full overflow-hidden">
                                 <div
-                                    className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease_out]"
+                                    className="bg-primary h-1 rounded-full origin-left animate-[grow_1.5s_ease_out]"
                                     style={{ width: `${skill.level}%` }}
                                 />
                             </div>
                             <div className="text-right mt-1">
-                                <span className="text-base text-muted-foreground">{skill.level}%</span>
+                                <span className="text-xs text-muted-foreground">{skill.level}%</span>
                             </div>
                         </div>
                     ))}
