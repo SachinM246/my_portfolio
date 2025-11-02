@@ -105,22 +105,12 @@ export const Footer = () => {
                 <div className="border-t border-border my-8"></div>
 
                 {/* Bottom Section */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-4">
                     <p className="text-sm text-muted-foreground flex items-center gap-1">
                         &copy; {new Date().getFullYear()} Sachin Mathur. Made with
                         <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" />
                         and lots of coffee ☕
                     </p>
-
-                    <div className="flex items-center gap-4 text-sm">
-                        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                            Privacy Policy
-                        </a>
-                        <span className="text-border">|</span>
-                        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                            Terms of Service
-                        </a>
-                    </div>
                 </div>
             </div>
 

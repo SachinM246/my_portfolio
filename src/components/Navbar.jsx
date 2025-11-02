@@ -70,16 +70,16 @@ export const Navbar = () => {
             <div className="container mx-auto flex items-center justify-between px-4 md:px-8 lg:px-32">
                 {/* Logo */}
                 <a
-                    className="text-xl font-bold text-primary flex items-center group"
+                    className="text-xl font-bold flex items-center group"
                     href="#hero"
                     onClick={handleLinkClick}
                 >
                     <span className="relative z-10">
-                        <span className="text-foreground group-hover:text-primary transition-colors duration-300">
+                        <span className="text-primary group-hover:scale-105 inline-block transition-transform duration-300">
                             Sachin
                         </span>
-                        <span className="text-foreground/60 ml-1 group-hover:text-primary/80 transition-colors duration-300">
-                            Portfolio
+                        <span className="text-foreground ml-0.5 group-hover:scale-105 inline-block transition-transform duration-300">
+                            .dev
                         </span>
                     </span>
                 </a>

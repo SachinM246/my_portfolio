@@ -133,8 +133,11 @@ const ProjectCard = ({ project }) => {
 
 export const ProjectSection = () => {
     return (
-        <section id="projects" className="py-24 px-4 relative">
-            <div className="container mx-auto max-w-6xl">
+        <section id="projects" className="py-24 px-4 relative overflow-hidden">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5"></div>
+
+            <div className="container mx-auto max-w-6xl relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
