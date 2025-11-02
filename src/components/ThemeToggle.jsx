@@ -34,7 +34,7 @@ export const ThemeToggle = () => {
             "focus:outline-hidden",
             isDarkMode ? "bg-gray-800 border-gray-700 hover:bg-gray-700" : "bg-yellow-200 border-yellow-400 hover:bg-yellow-300"
         )}>
-            {isDarkMode ? <Sun className="h-6 w-6 text-yellow-300" /> : <Moon className="h-6 w-6 text-blue-900" />}
+            {isDarkMode ? <Sun className="h-5 w-5 text-yellow-300" /> : <Moon className="h-5 w-5 text-blue-900" />}
         </button>
     );
 };
