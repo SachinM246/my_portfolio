@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AboutSection } from "../components/AboutSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
@@ -9,7 +10,7 @@ import { StarBackground } from "../components/StarBackground";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Home = () => {
-    React.useEffect(() => {
+    useEffect(() => {
         document.documentElement.classList.add('dark');
     }, []);
 
