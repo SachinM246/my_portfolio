@@ -28,6 +28,15 @@ const projects = [
         tags: ["React", "Socket.io", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         demoUrl: "https://calm-moonbeam-36594e.netlify.app",
         githubUrl: "https://github.com/SachinM246/Chattify",
+    },
+    {
+        id: 4,
+        title: "Job Portal",
+        description: "Developed a job portal application using the MERN stack with features like job listings, user authentication, and a responsive UI built with Tailwind CSS.",
+        imageUrl: "/projects/image4.png",
+        tags: ["React", "Node.js", "Express", "MongoDB"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/SachinM246/Job-Portal",
     }
 ]
 
